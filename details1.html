@@ -1,0 +1,39 @@
+<html lang="en">
+     <head></head>
+      <body>
+          
+         <h1>
+            <a= href ="{{url_for('details')}}"
+         </h1>
+          <hr/>
+          {%- for message in get_flased_messages() %}
+            
+          { % endfor % }
+          <h1> Expenses(<a href= "{{ url_for('data'}}">Add person</a>)</h1>
+           
+          <table>
+              <thread>
+                   <tr>
+                      <th>name</th>
+                      <th>salary</th>
+                      <th>house_rent</th>
+                      <th>travel_charges</th>
+                      <th>food</th>
+                    </tr>
+              </thread>
+             
+              <tbody>
+                 {% for person in Expenses %}
+                       <tr>
+                           <td>{{person.name}}</td>       
+                           <td>{{person.salary}}</td>
+                           <td>{{person.house_rent}}</td>
+                           <td>{{person.travel_charges}}</td>
+                           <td>{{person.food}}</td>
+                        </tr>
+                 {% endfor %}
+             </tbody>
+         </table>
+    </body>
+</html>
+    
